@@ -1,20 +1,14 @@
-import RoomProvider from "@/components/RoomProvider";
-import { auth } from "@clerk/nextjs/server";
-import { ReactNode } from "react";
+"use client";
+import { useParams } from "next/navigation";
+import Document from "@/components/Document";
 
-// Define the props type explicitly
-type DocLayoutProps = {
-  children: ReactNode;
-  params: {
-    id: string;
-  };
+const DocumentPage = () => {
+  const params = useParams();
+  const id = params.id;
+  return (
+    <div className="flex flex-col flex-1 min-h-screen">
+      <Document id={id} />
+    </div>
+  );
 };
-
-const DocLayout = ({ children, params: { id } }: DocLayoutProps) => {
-  // Use the auth.protect() method
-  auth.protect();
-
-  return <RoomProvider roomId={id}>{children}</RoomProvider>;
-};
-
-export default DocLayout;
+export default DocumentPage;
