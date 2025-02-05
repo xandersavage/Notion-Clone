@@ -1,14 +1,18 @@
-"use client";
-import { useParams } from "next/navigation";
 import Document from "@/components/Document";
 
-const DocumentPage = () => {
-  const params = useParams();
-  const id = params.id;
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+const DocumentPage = ({ params }: PageProps) => {
+  const { id } = params;
   return (
     <div className="flex flex-col flex-1 min-h-screen">
       <Document id={id} />
     </div>
   );
 };
+
 export default DocumentPage;
