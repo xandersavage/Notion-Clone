@@ -54,7 +54,7 @@ const TranslateDocument = ({ doc }: { doc: Y.Doc }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState<Language | null>(null);
   const [summary, setSummary] = useState("");
-  const [question, setQuestion] = useState("");
+  const [question] = useState("");
   const [isPending, startTransition] = useTransition();
 
   const handleAskQuestion = (e: React.FormEvent) => {

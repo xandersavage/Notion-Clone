@@ -1,6 +1,6 @@
 "use client";
 import { useMyPresence, useOthers } from "@liveblocks/react/suspense";
-import { PointerEvent, useEffect } from "react";
+import { PointerEvent } from "react";
 import FollowPointer from "./FollowPointer";
 
 const LiveCursorProvider = ({ children }: { children: React.ReactNode }) => {

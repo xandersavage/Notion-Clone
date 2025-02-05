@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { useState, useTransition } from "react";
 import { Button } from "./ui/button";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { inviteUserToDocument } from "@/actions/actions";
 import { toast } from "sonner";
 import { Input } from "./ui/input";
@@ -17,7 +17,6 @@ import { Input } from "./ui/input";
 const InviteUser = () => {
   const [email, setEmail] = useState("");
   const pathname = usePathname();
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 

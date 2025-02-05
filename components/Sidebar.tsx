@@ -6,7 +6,6 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import { useUser } from "@clerk/nextjs";
 import {
   collectionGroup,
-  doc,
   DocumentData,
   query,
   where,
